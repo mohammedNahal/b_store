@@ -1,89 +1,126 @@
-name: b_store
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+# B.Store Application Configuration
+# A Flutter-based e-commerce application leveraging Firebase services for backend functionality
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
+name: b_store
+# Unique identifier for this package
+# Used throughout the development ecosystem to reference this application
+# Should be in snake_case format with no special characters
+# Must be a valid Dart identifier (not starting with numbers)
+
+description: "A cross-platform e-commerce mobile application built with Flutter and powered by Firebase , designed to deliver a seamless shopping experience for users and efficient inventory management for administrators. This application integrates real-time product listings , secure user authentication , shopping cart functionality , and cloud-based storage for images and user data. Leveraging Firebase Authentication , Cloud Firestore , and Storage , the app ensures secure, scalable, and responsive interactions. Advanced features include custom Arabic typography (Simplified Arabic), responsive UI/UX design , and state management using BLoC for dynamic user interactions. The project emphasizes modular architecture , code maintainability , and performance optimization , making it ideal for future expansions like payment gateways, analytics, or multi-language support."
+# Brief summary of the package's purpose
+# Required for packages published to pub.dev
+# Should be concise (60-180 characters) and informative
+
+# Prevents accidental public publishing - remove for pub.dev deployment
+# Security measure to avoid unintentional exposure of private packages
+# Set to 'none' for internal/private projects
+publish_to: 'none'
+
+# Versioning follows Semantic Versioning (https://semver.org/) 
+# Format: [major].[minor].[patch]+[build]
+# Platform-specific mappings:
+# - Android: versionName (CFBundleShortVersionString) + versionCode (CFBundleVersion)
+# - iOS: CFBundleShortVersionString (build-name) + CFBundleVersion (build-number)
+# - Windows: ProductVersion (major.minor.patch.build)
+# Build numbers can be overridden at build time using --build-name and --build-number flags
 version: 1.0.0+1
 
 environment:
+  # Specifies required Dart SDK version constraint
+  # Uses caret syntax (^) for compatibility while allowing safe upgrades
+  # Minimum Dart version required for this project
   sdk: ^3.7.2
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
+  # Core Flutter framework dependency
+  # Always required as the foundation of all Flutter applications
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  flutter_localizations:
+    sdk: flutter
+  # Cupertino Icons font for iOS-style iconography
+  # Provides Apple's SF Symbols integration and Cupertino icon set
   cupertino_icons: ^1.0.8
 
+  # Firebase Core integration
+  # Foundation for all Firebase services in the application
+  firebase_core: ^3.13.1
+
+  # Firebase Authentication service
+  # Handles user management, email/password auth, and third-party integrations
+  firebase_auth: ^5.5.4
+
+  # Firebase Cloud Storage integration
+  # For managing user-generated content and media files
+  firebase_storage: ^12.4.6
+
+  # Business Logic Component pattern implementation
+  # State management solution for complex application logic
+  flutter_bloc: ^9.1.1
+  intl: ^0.19.0
+
 dev_dependencies:
+  # Flutter testing framework
+  # Required for widget testing and unit testing capabilities
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+  # Official Flutter lint ruleset
+  # Contains recommended code quality and style guidelines
+  # Configuration managed in analysis_options.yaml
   flutter_lints: ^5.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+  # Enables Material Design components and iconography
+  # Required for apps using MaterialApp and Material Components
   uses-material-design: true
+  generate: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  # Asset management configuration
+  # Resolution-aware images should follow:
+  # - [asset-path]/[density]/[filename] structure
+  # Example:
+  # - assets/images/icon.png (base 1.0x)
+  # - assets/images/2.0x/icon.png
+  # - assets/images/3.0x/icon.png
+  assets:
+    - assets/images/
+    - assets/icons/
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/to/resolution-aware-images
+  # Font configuration section
+  # Custom fonts must be placed in the specified asset paths
+  # Each font family can have multiple weights and styles
+  # Weight values should follow standard typography conventions (400=normal, 700=bold)
+  fonts:
+    - family: myFont
+      fonts:
+        - asset: assets/fonts/Roboto_Condensed-Regular.ttf
+          weight: 400
+          style: normal
+        - asset: assets/fonts/Roboto_Condensed-Medium.ttf
+          weight: 500
+          style: normal
+        - asset: assets/fonts/Roboto_Condensed-Bold.ttf
+          weight: 700
+          style: normal
 
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/to/asset-from-package
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package
+# NOTES FOR DEVELOPERS:
+# 1. To update dependencies to latest versions:
+#    Run `flutter pub upgrade --major-versions`
+#
+# 2. To check for outdated dependencies:
+#    Run `flutter pub outdated`
+#
+# 3. For multi-environment builds:
+#    Consider using multiple pubspec.yaml files or build flavors
+#
+# 4. Font Best Practices:
+#    - Use consistent font weights across the application
+#    - Compress font files where possible (woff2 format recommended)
+#    - Limit the number of font variants to optimize app size
+#
+# 5. Asset Management:
+#    - Maintain 1x, 2x, and 3x image variants for optimal display
+#    - Use PNG format for static images and WebP for complex graphics
+#    - Organize assets in a clear directory structure
