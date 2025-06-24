@@ -1,4 +1,7 @@
+import 'package:b_store/app/constants/assets.dart';
+import 'package:b_store/app/constants/routes.dart';
 import 'package:flutter/material.dart';
+
 
 class LunchRoute extends StatefulWidget {
   const LunchRoute({super.key});
@@ -14,11 +17,15 @@ class _LunchRouteState extends State<LunchRoute> {
     // TODO: implement initState
     super.initState();
     Future.delayed(Duration(seconds: 2),() {
-      Navigator.pushReplacementNamed(context, '/next_route');
+      Navigator.pushReplacementNamed(context, AppRoutes.outBoarding);
     },);
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: Image.asset(AppAssets.logo),
+      ),
+    );
   }
 }

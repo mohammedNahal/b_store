@@ -59,13 +59,14 @@ dependencies:
   # State management solution for complex application logic
   flutter_bloc: ^9.1.1
   intl: ^0.19.0
+  hexcolor: ^3.0.1
 
 dev_dependencies:
   # Flutter testing framework
   # Required for widget testing and unit testing capabilities
   flutter_test:
     sdk: flutter
-
+  intl_utils: ^2.8.4
   # Official Flutter lint ruleset
   # Contains recommended code quality and style guidelines
   # Configuration managed in analysis_options.yaml
@@ -123,4 +124,6 @@ flutter:
 # 5. Asset Management:
 #    - Maintain 1x, 2x, and 3x image variants for optimal display
 #    - Use PNG format for static images and WebP for complex graphics
+flutter_intl:
+  enabled: true
 #    - Organize assets in a clear directory structure
