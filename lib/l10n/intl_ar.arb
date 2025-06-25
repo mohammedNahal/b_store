@@ -20,5 +20,16 @@
   "back": "عودة",
   "recoveryTitle": "استرد\nالحساب الخاص بك",
   "emailOrPhone": "أدخل بريدك الإلكتروني أو رقم الهاتف",
-  "next": "التالي"
+  "next": "التالي",
+  "homeTitle": "اختر من الفئات",
+  "vegetablesAndFruitsCategories": "الخضروات والفواكه",
+  "meatCategories": "اللحوم",
+  "cheeseCategories": "الأجبان",
+  "rationingMaterialsCategories": "المواد التموينية",
+  "snacksCategories": "الوجبات الخفيفة",
+  "detergentCategories": "المنظفات",
+  "drinkCategories": "المشروبات",
+  "mostSelling": "الأكثر مبيعاً",
+  "viewAll": "عرض الكل"
+
 }

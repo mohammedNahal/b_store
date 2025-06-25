@@ -12,4 +12,7 @@ class AppAssets{
   static final outBoarding2 = 'assets/images/out_boarding2.jpg';
   static final outBoarding3 = 'assets/images/out_boarding3.jpg';
   static final outBoarding4 = 'assets/images/out_boarding4.jpeg';
+  static final iconSearch = "assets/icons/search_icon.png";
+  static final iconFavorite = "assets/icons/favorite.png";
+
 }

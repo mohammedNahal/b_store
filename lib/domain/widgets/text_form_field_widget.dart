@@ -33,12 +33,25 @@ class TextFormFieldWidget extends StatelessWidget {
       controller: controller,
       obscureText: showPassword,
       onChanged: onChange ?? (value) {},
+      style:  TextStyle(
+        color: AppColors.blackColor,
+        fontSize: 16,
+      ),
+      cursorColor: AppColors.primaryColor,
+      cursorWidth: 3,
+      cursorHeight: 18,
+      cursorOpacityAnimates: true,
+      cursorRadius: Radius.circular(50),
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+        contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
         labelText: label,
         floatingLabelBehavior: FloatingLabelBehavior.always,
+        labelStyle: TextStyle(
+          color: Colors.grey[600],
+          fontSize: 14,
+        ),
         prefixIcon: Padding(
-          padding: EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(12.0),
           child: Image.asset(
             prefixIcon,
             width: 25,
@@ -65,8 +78,9 @@ class TextFormFieldWidget extends StatelessWidget {
             width: 1,
           ),
         ),
-        suffixIcon: suffixIcon ?? Container(),
+        suffixIcon: suffixIcon ?? const SizedBox(),
       ),
     );
+
   }
 }

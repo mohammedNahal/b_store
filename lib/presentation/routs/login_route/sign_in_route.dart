@@ -73,7 +73,10 @@ class _SignInRouteState extends State<SignInRoute> {
                       controller: _passwordController,
                       showPassword: _showPassword,
                       suffixIcon: IconButton(
-                        icon: _showPassword ? Image.asset(AppAssets.iconVisible):Image.asset(AppAssets.iconInvisible),
+                        icon:
+                            _showPassword
+                                ? Image.asset(AppAssets.iconVisible)
+                                : Image.asset(AppAssets.iconInvisible),
                         onPressed: () {
                           setState(() {
                             _showPassword = !_showPassword;
@@ -92,7 +95,10 @@ class _SignInRouteState extends State<SignInRoute> {
                       alignment: Alignment.centerRight,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, AppRoutes.forgetPassword);
+                          Navigator.pushNamed(
+                            context,
+                            AppRoutes.forgetPassword,
+                          );
                         },
                         child: Text(
                           'Forget password?',
@@ -107,22 +113,26 @@ class _SignInRouteState extends State<SignInRoute> {
                           (_isEmailValid && _isPasswordValid)
                               ? () {
                                 // منطق الدخول هنا
+                                Navigator.pushReplacementNamed(
+                                  context,
+                                  AppRoutes.home,
+                                );
                                 print('Signing in...');
                               }
                               : null,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey[200],
+                        backgroundColor: AppColors.primaryColor,
                         padding: EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                       child: Text(
-                        'Sign in',
+                        local.login,
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: AppColors.whaitColor,
                         ),
                       ),
                     ),
@@ -137,7 +147,7 @@ class _SignInRouteState extends State<SignInRoute> {
                 Navigator.pushReplacementNamed(context, AppRoutes.register);
               },
               child: Text(
-                'Create an account?',
+                local.create_account,
                 style: TextStyle(color: AppColors.primaryColor),
               ),
             ),

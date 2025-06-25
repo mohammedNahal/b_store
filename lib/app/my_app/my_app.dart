@@ -4,6 +4,7 @@ import 'package:b_store/app/constants/locals.dart';
 import 'package:b_store/app/constants/routes.dart';
 import 'package:b_store/presentation/routs/final_boarding_route/final_boarding_route.dart';
 import 'package:b_store/presentation/routs/forget_password_route/forget_password_route.dart';
+import 'package:b_store/presentation/routs/home_route/home_route.dart';
 import 'package:b_store/presentation/routs/login_route/sign_in_route.dart';
 import 'package:b_store/presentation/routs/lunch_route/lunch_route.dart';
 import 'package:b_store/presentation/routs/out_boarding_route/out_boarding_route.dart';
@@ -23,6 +24,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: AppAssets.fontFamily,
         scaffoldBackgroundColor: AppColors.whaitColor,
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: AppColors.whaitColor,
+          elevation: 3,
+        ),
       ),
       localizationsDelegates: [
         S.delegate,
@@ -41,6 +46,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.register: (context) => SignUpRoute(),
         AppRoutes.login: (context)=> SignInRoute(),
         AppRoutes.forgetPassword: (context) => ForgetPasswordRoute(),
+        AppRoutes.home: (context) => HomeRoute(),
       },
     );
   }

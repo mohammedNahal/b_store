@@ -12,4 +12,9 @@ class AppColors{
   static final borderColor = HexColor('#E1E1E1');
   static final focusedBorderColor = HexColor('#A3B0E3');
   static final errorBorderColor = HexColor('#F96767');
+  static final rectangleColor = HexColor('#FBFBFB');
+  static final rectangleBoarderColor = HexColor('#EFEEF2');
+  static final backgroundImages = HexColor('#FBFAFA');
+  static final discountColor = HexColor('#F57C76');
+  static final priceColor = HexColor('#9DA2B0');
 }
