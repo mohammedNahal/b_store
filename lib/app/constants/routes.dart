@@ -6,4 +6,5 @@ class AppRoutes{
   static final login  = '/sign_in_route';
   static final forgetPassword = '/forget_password_route';
   static final home = '/home_route';
+  static final editProfile = '/edit_profile_route';
 }

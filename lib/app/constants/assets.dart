@@ -14,5 +14,21 @@ class AppAssets{
   static final outBoarding4 = 'assets/images/out_boarding4.jpeg';
   static final iconSearch = "assets/icons/search_icon.png";
   static final iconFavorite = "assets/icons/favorite.png";
-
+  static final iconFavoriteFill = "assets/icons/favorite-fill.png";
+  static final iconHome = "assets/icons/home.png";
+  static final iconHomeFill = "assets/icons/home-fill.png";
+  static final iconCart = "assets/icons/cart.png";
+  static final iconCartFill = "assets/icons/cart-fill.png";
+  static final iconFavoriteBottomNav = "assets/icons/favorite-bottom_nav.png";
+  static final iconFavoriteFillBottomNav = "assets/icons/favorite-fill-bottom_nav.png";
+  static final iconProfile = "assets/icons/profile.png";
+  static final iconProfileFill = "assets/icons/profile-fill.png";
+  static final iconEdite = "assets/icons/edit.png";
+  static final iconNotifcation = "assets/icons/notification.png";
+  static final iconMyOrder = "assets/icons/order.png";
+  static final iconAddress = "assets/icons/address.png";
+  static final iconPayment = "assets/icons/payment.png";
+  static final iconSetting ="assets/icons/setting.png";
+  static final profileImage = "assets/images/meeeeeeeeee.jpg";
+  static final iconForward = "assets/icons/forward.png";
 }

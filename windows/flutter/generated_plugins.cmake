@@ -3,9 +3,11 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  connectivity_plus
   firebase_auth
   firebase_core
   firebase_storage
+  nb_utils
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

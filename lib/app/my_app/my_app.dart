@@ -2,6 +2,8 @@ import 'package:b_store/app/constants/assets.dart';
 import 'package:b_store/app/constants/colors.dart';
 import 'package:b_store/app/constants/locals.dart';
 import 'package:b_store/app/constants/routes.dart';
+import 'package:b_store/presentation/routs/cart_route/cart_route.dart';
+import 'package:b_store/presentation/routs/edit_profile_route/edit_profile_route.dart';
 import 'package:b_store/presentation/routs/final_boarding_route/final_boarding_route.dart';
 import 'package:b_store/presentation/routs/forget_password_route/forget_password_route.dart';
 import 'package:b_store/presentation/routs/home_route/home_route.dart';
@@ -22,6 +24,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: AppColors.whaitColor,
+          elevation: 0,
+        ),
         fontFamily: AppAssets.fontFamily,
         scaffoldBackgroundColor: AppColors.whaitColor,
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -47,6 +53,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.login: (context)=> SignInRoute(),
         AppRoutes.forgetPassword: (context) => ForgetPasswordRoute(),
         AppRoutes.home: (context) => HomeRoute(),
+        AppRoutes.editProfile: (context)=> EditProfileRoute(),
       },
     );
   }

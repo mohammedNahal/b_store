@@ -67,7 +67,7 @@ class _SignUpRouteState extends State<SignUpRoute> {
                   children: [
                     TextFormFieldWidget(
                       controller: _emailController,
-                      prefixIcon: AppAssets.iconEmail,
+                      prefixIcon: Image.asset(AppAssets.iconEmail, width: 25, height: 25,),
                       label: local.email,
                       focusedBorderColor: AppColors.focusedBorderColor,
                       borderColor: AppColors.borderColor,
@@ -78,7 +78,7 @@ class _SignUpRouteState extends State<SignUpRoute> {
                     SizedBox(height: 16),
                     TextFormFieldWidget(
                       controller: _mobileController,
-                      prefixIcon: AppAssets.iconPhone,
+                      prefixIcon: Image.asset(AppAssets.iconPhone, width: 25, height: 25,),
                       label: local.mobile,
                       focusedBorderColor: AppColors.focusedBorderColor,
                       borderColor: AppColors.borderColor,
@@ -98,7 +98,7 @@ class _SignUpRouteState extends State<SignUpRoute> {
                           });
                         },
                       ),
-                      prefixIcon: AppAssets.iconLock,
+                      prefixIcon: Image.asset(AppAssets.iconLock, width: 25, height: 25,),
                       label: local.password,
                       focusedBorderColor: AppColors.focusedBorderColor,
                       borderColor: AppColors.borderColor,

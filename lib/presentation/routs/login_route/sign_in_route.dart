@@ -58,7 +58,7 @@ class _SignInRouteState extends State<SignInRoute> {
                   children: [
                     TextFormFieldWidget(
                       controller: _emailController,
-                      prefixIcon: AppAssets.iconEmail,
+                      prefixIcon: Image.asset(AppAssets.iconEmail, width: 25, height: 25,),
                       label: local.email,
                       focusedBorderColor: AppColors.focusedBorderColor,
                       borderColor: AppColors.borderColor,
@@ -83,7 +83,7 @@ class _SignInRouteState extends State<SignInRoute> {
                           });
                         },
                       ),
-                      prefixIcon: AppAssets.iconLock,
+                      prefixIcon: Image.asset(AppAssets.iconLock, width: 25, height: 25,),
                       label: local.password,
                       focusedBorderColor: AppColors.focusedBorderColor,
                       borderColor: AppColors.borderColor,
